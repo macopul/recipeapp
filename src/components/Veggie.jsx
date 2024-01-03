@@ -49,7 +49,6 @@ function Veggie() {
           })}
         </Splide>
       </div>
-      {/* <button onClick={getVeggie}>FETCH Veggie</button> */}
     </div>
   );
 }

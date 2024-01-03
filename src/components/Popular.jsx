@@ -20,26 +20,10 @@ function Popular() {
     const data = await api.json();
     setPopular(data.recipes);
     setRecipesInLocalStorage(data.recipes);
-    // localStorage.setItem("popular", JSON.stringify(data));
-  };
-
-  const logRecipesFromStorage = () => {
-    // const arr = [];
-    const recipesInStorage = getRecipesFromLocalStorage();
-    console.log(recipesInStorage);
-    // recipesInStorage.forEach((element) => arr.push(element.id));
-    // const toFindDuplicates = (arry) =>
-    //   arry.filter((item, index) => arr.indexOf(item) !== index);
-    // const duplicateElements = toFindDuplicates(arr);
-    // console.log(duplicateElements);
+    localStorage.setItem("popular", JSON.stringify(data));
   };
 
   useEffect(() => {
-    // const dataFromLocalStorage = JSON.parse(localStorage.getItem("popular"));
-    // if (dataFromLocalStorage) {
-    //   setPopular(dataFromLocalStorage.recipes);
-    //   return;
-    // }
     getPopular();
   }, []);
 
@@ -72,8 +56,6 @@ function Popular() {
           })}
         </Splide>
       </div>
-      {/* <button onClick={() => console.log(result)}>LOG STORAGE</button> */}
-      <button onClick={() => "f"}>LOG STORAGE</button>
     </div>
   );
 }
