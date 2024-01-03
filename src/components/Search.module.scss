@@ -1,0 +1,24 @@
+.Search {
+  position: relative;
+  width: 100%;
+  margin: 2rem auto;
+  
+  input {
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    background: linear-gradient(35deg, #494949, #313131);
+    width: 100%;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(100%, -50%);
+    color: white;
+  }
+}

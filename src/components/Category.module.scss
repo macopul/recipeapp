@@ -1,0 +1,49 @@
+.categoryList {
+  margin: 2rem 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+
+  .navLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    background: linear-gradient(35deg, #494949, #313131);
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    transform: scale(0.8);
+
+    h4 {
+      color: white;
+      font-size: 0.6rem;
+    }
+
+    svg {
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    &:global.active {
+      background: linear-gradient(to right, #f27121, #e94057);
+
+      svg {
+        color: white;
+      }
+
+      h4 {
+        color: white;
+      }
+    }
+  }
+}
+
+// .navLink.Fol {
+//   background: blue;
+//   font-size: 24rem;
+// }

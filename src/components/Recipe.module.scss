@@ -1,0 +1,98 @@
+.Recipe {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+
+.imageWrapper {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.buttonSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0;
+
+  button {
+    width: 6rem;
+    height: 2rem;
+    border: 2px solid #1b1a1a;
+    background: #f3f3f3;
+    color: #1b1a1a;
+    cursor: pointer;
+
+    &.active {
+      background: linear-gradient(35deg, #494949, #313131);
+      color: #f3f3f3;
+    }
+  }
+}
+
+.description {
+  width: 100%;
+  font-size: 1rem;
+
+  .usefulDetails {
+    display: flex;
+    justify-content: space-around;
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+      justify-content: center;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  h2 {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .instruction {
+    margin: 2rem 0;
+
+    h2 {
+      font-style: "Montserrat";
+    }
+  }
+}
+
+.ingredients {
+  margin: 2rem 0;
+
+  li {
+    display: inline-block;
+    margin: 0.5rem 0;
+    padding: 0 0.4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Recipe {
+    flex-direction: row;
+    >div{
+      width: 100%;
+    }
+  }
+
+  .imageWrapper{
+    width: 100%;
+  }
+}
