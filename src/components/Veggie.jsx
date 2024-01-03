@@ -7,6 +7,8 @@ import Card from "./Card";
 
 function Veggie() {
   const [veggie, setVeggie] = useState([]);
+  const { setRecipesInLocalStorage } = useRecipeStorage();
+  console.log("veggie");
 
   const getVeggie = async () => {
     const api = await fetch(
@@ -14,6 +16,7 @@ function Veggie() {
     );
     const data = await api.json();
     setVeggie(data.recipes);
+    setRecipesInLocalStorage(data.recipes);
   };
 
   useEffect(() => {
@@ -52,9 +55,5 @@ function Veggie() {
     </div>
   );
 }
-
-const Gradient = () => {
-  return <div className={styles.gradient}></div>;
-};
 
 export default Veggie;

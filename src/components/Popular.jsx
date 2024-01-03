@@ -5,13 +5,10 @@ import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
 import Card from "./Card";
 import { useRecipeStorage } from "../hooks/useRecipeStorage";
-// import { _ } from "lodash";
-import { unionBy } from "lodash";
 
 function Popular() {
   const [popular, setPopular] = useState([]);
-  const { setRecipesInLocalStorage, getRecipesFromLocalStorage } =
-    useRecipeStorage();
+  const { setRecipesInLocalStorage } = useRecipeStorage();
 
   const getPopular = async () => {
     const api = await fetch(
@@ -20,10 +17,10 @@ function Popular() {
     const data = await api.json();
     setPopular(data.recipes);
     setRecipesInLocalStorage(data.recipes);
-    localStorage.setItem("popular", JSON.stringify(data));
   };
 
   useEffect(() => {
+    console.log("Popular use Effect fired");
     getPopular();
   }, []);
 
