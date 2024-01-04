@@ -5,7 +5,7 @@ import styles from "./Logo.module.scss";
 function Logo() {
   return (
     <div className={styles.Logo}>
-      <NavLink className={styles.NavLink} to={"/"}>
+      <NavLink className={styles.NavLink} to={"/recipeapp"}>
         <h3>Best</h3>
         <div className={styles.imageWrapper}></div>
         <h3>Food</h3>

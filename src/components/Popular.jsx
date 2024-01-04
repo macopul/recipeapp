@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./Popular.module.scss";
+import styles from "./Picks.module.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
@@ -20,7 +20,6 @@ function Popular() {
   };
 
   useEffect(() => {
-    console.log("Popular use Effect fired");
     getPopular();
   }, []);
 

@@ -9,8 +9,6 @@ export const useRecipeStorage = () => {
     const recipesInLocalStorage = getRecipesFromLocalStorage();
     const newRecipes = _.unionBy(recipesInLocalStorage, recipes, "id");
     localStorage.setItem("recipes", JSON.stringify(newRecipes));
-    const actualRecipesInLocalStorage = getRecipesFromLocalStorage();
-    console.log(actualRecipesInLocalStorage);
   };
 
   return {

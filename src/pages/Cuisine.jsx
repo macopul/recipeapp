@@ -23,7 +23,7 @@ function Cuisine() {
     <div className={styles.grid}>
       {cuisine.map((item) => {
         return (
-          <Link to={"/recipe/" + item.id}>
+          <Link key={item.id} to={"/recipe/" + item.id}>
             <div className={styles.card} key={item.id}>
               <img src={item.image} alt="" />
               <h4>{item.title}</h4>

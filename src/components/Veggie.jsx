@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import styles from "./Popular.module.scss";
+import styles from "./Picks.module.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { Link } from "react-router-dom";
 import Card from "./Card";
+import { useRecipeStorage } from "../hooks/useRecipeStorage";
 
 function Veggie() {
   const [veggie, setVeggie] = useState([]);
   const { setRecipesInLocalStorage } = useRecipeStorage();
-  console.log("veggie");
 
   const getVeggie = async () => {
     const api = await fetch(

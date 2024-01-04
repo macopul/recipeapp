@@ -8,10 +8,10 @@ import Recipe from "../components/Recipe";
 function Pages() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/recipeapp" element={<Home />} />
       <Route path="/cuisine/:type" element={<Cuisine />} />
-      <Route path="/searched/:search"  element={<Searched />} />
-      <Route path="/recipe/:id"  element={<Recipe />} />
+      <Route path="/searched/:search" element={<Searched />} />
+      <Route path="/recipe/:id" element={<Recipe />} />
     </Routes>
   );
 }
